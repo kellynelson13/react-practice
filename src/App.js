@@ -12,7 +12,15 @@ function App() {
     <div className="App">
       <h1>DEV SKILLS</h1>
       <hr />
-
+        {
+          devSkills.map(s => {
+            return (
+              <div>
+                <p>{s.skill}<span>{s.level}</span></p>
+              </div>
+            )
+          })
+        }
       <hr />
       <form>
         <label>
