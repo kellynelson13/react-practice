@@ -1,23 +1,31 @@
 import logo from './logo.svg';
 import './App.css';
+import {useState} from 'react';
 
 function App() {
+
+  const [userInput, setUserInput] = useState({skill: "", level: ""});
+  const [devSkills, setDevSkills] = useState([{skill:"JavaScript", level: 5}]);
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>DEV SKILLS</h1>
+      <hr />
+
+      <hr />
+      <form>
+        <label>
+          <span>SKILL</span>
+          <input type="text" name="skill" />
+        </label>
+        <label>
+          <span>LEVEL</span>
+          <input type="text" name="level"/>
+        </label>
+      </form>
+
+      
     </div>
   );
 }
