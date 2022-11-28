@@ -16,6 +16,7 @@ function App() {
   const handleSubmit = (e) => {
     e.preventDefault()
     setDevSkills([...devSkills, userInput])
+    setUserInput({skill:"", level:""})
   }
   console.log("DevSKills:", devSkills)
 
@@ -51,6 +52,7 @@ function App() {
             name="level"
             value={userInput.level}
           >
+              <option value=''></option>
               <option value='1'>1</option>
               <option value='2'>2</option>
               <option value='3'>3</option>
